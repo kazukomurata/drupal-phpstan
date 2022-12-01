@@ -1,0 +1,11 @@
+parameters:
+  level: max # 0〜8 max=8
+  phpVersion: 80100 # PHP 8.1 指定がなければ、実行中のPHPのバージョンで解析
+  tipsOfTheDay: false # https://phpstan.org/config-reference#tipsoftheday
+  paths:
+    ## 対象を指定. srcとかのざっくりとしたパス指定も可能.
+    - docroot/themes/custom
+    - docroot/modules/custom
+  bootstrapFiles:
+    # DrupalのPHPUnitのテストコードを対象にするときはテスト用のbootstrap読み込みが必要.
+    - docroot/core/tests/bootstrap.php
